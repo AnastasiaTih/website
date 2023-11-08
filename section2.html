@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crafted Suds</title>
+    <link rel="stylesheet" href="style.css">
+    <a id="top">
+        <a href="#bot" target="_self"> <img src="s.png" width="50" height="50" align="right"></a>
+    </a>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="website.html">Главная</a></li>
+            <li><a href="section2.html">Ассортимент</a></li>
+            <li><a href="section3.html">Заказать</a></li>
+            <li class="dropdown">
+                <a id="mono-title" href="section4.html">О нас</a>
+                <ul class="dropdown-content">
+                    <li><a href="section4.html#good">Качество</a></li>
+                    <li><a href="section4.html#service">Наши принципы</a></li>
+                    <li><a href="section4.html#pay">Доставка</a></li>
+                    <li><a href="section4.html#woy">Интересные факты</a></li>
+                </ul>
+            </li>
+            <li><a href="hw.html" target="_blank">Сайт с домашними заданиями</a></li>
+        </ul>
+    </nav>
+        <h2>Ассортимент</h2>
+        <table align="center" width="1500" cellpadding="10" cellspacing="0" border="2" bordercolor="#0f518a">
+        <thead>
+            <tr bgcolor="#acbcc2">
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Вес гр.</th>
+                <th>Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="breez.jpg" class="thumbnail"><br><a href="page1.html" style="color:#510478">Морской бриз</a></td>
+                <td>Мыло нежно-голубого цвета с запахом морской волны, которое перенесёт вас на берег моря.</td>
+                <td>100</td>
+                <td>300 руб</td>
+            </tr>
+            <tr>
+                <td><img src="summer.jpg" class="thumbnail"><br><a href="page2.html" style="color:#510478">Летняя свежесть</a></td>
+                <td>Мыло нарезное с запахом летнего настроения.</td>
+                <td>100</td>
+                <td>350 руб</td>
+            </tr>
+            <tr>
+                <td><img src="tkila.jpg" class="thumbnail"><br><a href="page3.html" style="color:#510478">Текила-лайм</a></td>
+                <td>Мыло нарезное с люфой.</td>
+                <td>100</td>
+                <td>350 руб</td>
+            </tr>
+            <tr>
+                <td><img src="tropic.jpg" class="thumbnail"><br><a href="page4.html" style="color:#510478">Тропический десерт</a></td>
+                <td>Мыло нарезное с запахом фруктов и маслом виноградной косточки.</td>
+                <td>100</td>
+                <td>400 руб</td>
+            </tr>
+            <tr>
+                <td><img src="orange.jpg" class="thumbnail"><br><a href="page5.html" style="color:#510478">Апельсиновый взрыв</a></td>
+                <td>Мыло с запахом и маслом сочного апельсина.</td>
+                <td>100</td>
+                <td>400 руб</td>
+            </tr>
+            <tr>
+                <td><img src="lavanda.jpg" class="thumbnail"><br><a href="page6.html" style="color:#510478">Лавандовое удовольствие</a></td>
+                <td>Мыло нарезное с запахом лаванды и лепестками цветов.</td>
+                <td>100</td>
+                <td>450 руб</td>
+            </tr>
+            <tr>
+                <td><img src="sport.jpg" class="thumbnail"><br><a href="page7.html" style="color:#510478">Спорт life</a></td>
+                <td>Мыло нарезное с запахом свежей утренней росы.</td>
+                <td>100</td>
+                <td>350 руб</td>
+            </tr>
+        </tbody>
+        </table>
+    <a id="bot">
+        <a href="#top" target="_self"> <img src="n.png" width="50" height="50" align="right"></a>
+    </a>
+<script>
+    // Получаем текущий URL
+const currentUrl = window.location.href;
+
+// Получаем все ссылки в навигации
+const links = document.querySelectorAll('nav a');
+
+// Обрабатываем каждую ссылку
+links.forEach(link => {
+  // Получаем URL ссылки
+  const linkUrl = link.href;
+
+  // Проверяем, совпадает ли текущий URL с URL ссылки
+  if (currentUrl === linkUrl) {
+    // Добавляем класс "current" выбранной ссылке
+    link.classList.add('current');
+  }
+});
+</script>
+</body>
+</html>

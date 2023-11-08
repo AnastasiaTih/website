@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи с отправкой</title>
+</head>
+<body bgcolor="#350847" style="color:#edf2f5">
+<form id="UserEnter" name="UserEnter" onsubmit="return false;">
+    <h1 style="font-size: 50px" align="center">Решение алгоритмической задачи №1015</h1>
+    <h2 style="font-size: 30px" align="center">Дано вещественное число A. Вычислить х = a**2+4+5  при а &lt; 62; в противном случае x = 1/(a**2) + 4a + 5)</h2>
+    <label style="font-size: 30px" for="a">Введите вещественное число A:</label>
+    <input style="font-size: 30px" type="number" id="a" placeholder="Введите число">
+    <button style="font-size: 30px" onclick="calculate()">Вычислить</button>
+    <p style="font-size: 30px" id="result">Результаты вычислений: </p>
+    <img src="" id="image" style="display: none; float: left; margin-right: 20px;"><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a href="#" style="font-size: 30px" onclick="sendData()">Отправить</a>
+
+    <script>
+        var a;
+        var x;
+
+        function calculate() {
+            a = parseFloat(document.getElementById('a').value);
+            if (a < 62) {
+                x = Math.pow(a, 2) + 4 + 5;
+            } else {
+                x = 1 / Math.pow(a, 2) + (4 * a) + 5;
+            }
+            document.getElementById('result').innerHTML = 'Результат: ' + x;
+            document.getElementById("image").src = "image1.png";
+            document.getElementById("image").style.display = "block";
+        }
+
+        function sendData() {
+            if (typeof a !== 'undefined' && typeof x !== 'undefined') {
+                calculate(); // Выполняем расчет перед отправкой данных
+                var form = document.getElementById('UserEnter');
+                form.action = "https://www.bing.com/search?";
+                form.target = "_blank";
+                form.submit();
+            } else {
+                alert('Сначала выполните вычисления!');
+            }
+        }
+    </script>
+</form>
+</body>
+</html>

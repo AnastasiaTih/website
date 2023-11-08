@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+</head>
+<body bgcolor="#350847" style="color:#edf2f5">
+    <h1 style="font-size: 50px" align="center">Решение алгоритмической задачи №1015</h1>
+    <h2 style="font-size: 30px" align="center">Дано вещественное число A. Вычислить х = a**2+4+5  при а &lt; 62; в противном случае x = 1/(a**2) + 4a + 5)</h2>
+    <button style="font-size: 30px" onclick="calculate(4)">Вычислить для A = 4</button>
+    <button style="font-size: 30px" onclick="calculate(89)">Вычислить для A = 89</button>
+
+    <p style="font-size: 30px" id="result">Результаты вычислений: </p>
+    <img src="" id="image" style="display: none;">
+
+    <script>
+        function calculate(a) {
+            var x;
+            if (a < 62) {
+                x = Math.pow(a, 2) + 4 + 5;
+            } else {
+                x = 1 / Math.pow(a, 2) + (4 * a) + 5;
+            }
+            document.getElementById('result').innerHTML = 'Результат для A = ' + a + ': ' + x;
+            document.getElementById("image").src = "image1.png";
+            document.getElementById("image").style.display = "block";
+        }
+    </script>
+</body>
+</html>

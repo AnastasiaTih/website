@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crafted Suds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="website.html">Главная</a></li>
+            <li><a href="section2.html">Ассортимент</a></li>
+            <li><a href="section3.html">Заказать</a></li>
+            <li class="dropdown">
+                <a id="mono-title" href="section4.html">О нас</a>
+                <ul class="dropdown-content">
+                    <li><a href="section4.html#good">Качество</a></li>
+                    <li><a href="section4.html#service">Наши принципы</a></li>
+                    <li><a href="section4.html#pay">Доставка</a></li>
+                    <li><a href="section4.html#woy">Интересные факты</a></li>
+                </ul>
+            </li>
+            <li><a href="hw.html" target="_blank">Сайт с домашними заданиями</a></li>
+        </ul>
+    </nav>
+    <h2>Заказать</h2>
+    <form action="https://www.bing.com/search?" method="get" target="_blank">
+        <fieldset>
+            <legend>Оформить заказ</legend>
+            <label for="product">Выберите продукт:</label>
+            <select id="product" name="product">
+                <option value="soap">Морской бриз</option>
+                <option value="shampoo">Летняя свежесть</option>
+                <option value="lotion">Текила-лайм</option>
+            </select><br><br>
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+            <label>Выберите способ оплаты:</label><br>
+            <input type="radio" id="paypal" name="payment" value="paypal" required>
+            <label for="paypal">Наличные</label><br>
+            <input type="radio" id="creditcard" name="payment" value="creditcard" required>
+            <label for="creditcard">Кредитная карта</label><br><br>
+            <label for="delivery">Доставка:</label><br>
+            <input type="checkbox" id="delivery" name="delivery" value="yes">
+            <label for="delivery">Требуется доставка</label><br><br>
+            <label for="deliverydate">Дата доставки:</label>
+            <input type="date" id="deliverydate" name="deliverydate"><br><br>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="hidden" name="defaultvalue" value="default">
+            <input type="submit" value="Отправить">
+        </fieldset>
+    </form>
+    <h2>Оставить отзыв</h2>
+    <form action="https://www.bing.com/search?" method="get">
+        <fieldset>
+            <legend>Оставить отзыв</legend>
+            <label for="fname">Фамилия:</label>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="lname">Имя:</label>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="phone">Мобильный телефон:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="email">Электронка:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="hidden" name="date" value="">
+            <input type="submit" value="Отправить">
+        </fieldset>
+    </form>
+    <script>
+        // Получаем текущий URL
+        const currentUrl = window.location.href;
+
+        // Получаем все ссылки в навигации
+        const links = document.querySelectorAll('nav a');
+
+        // Обрабатываем каждую ссылку
+        links.forEach(link => {
+            // Получаем URL ссылки
+            const linkUrl = link.href;
+
+            // Проверяем, совпадает ли текущий URL с URL ссылки
+            if (currentUrl === linkUrl) {
+                // Добавляем класс "current" выбранной ссылке
+                link.classList.add('current');
+            }
+        });
+        // Получаем текущую дату
+        var currentDate = new Date();
+        var formattedDate = currentDate.toISOString().split('T')[0];
+
+        // Устанавлижаем значение текущей даты в скрытое поле "date" в форме отзыва
+        document.querySelector('input[name="date"]').value = formattedDate;
+
+        // Получаем текущий URL
+        const currentUrl = window.location.href;
+
+        // Получаем все ссылки в навигации
+        const links = document.querySelectorAll('nav a');
+
+        // Обрабатываем каждую ссылку
+        links.forEach(link => {
+            // Получаем URL ссылки
+            const linkUrl = link.href;
+
+            // Проверяем, совпадает ли текущий URL с URL ссылки
+            if (currentUrl === linkUrl) {
+                // Добавляем класс "current" выбранной ссылке
+                link.classList.add('current');
+            }
+        });
+    </script>
+</body>
+</html>
