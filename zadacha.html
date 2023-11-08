@@ -32,16 +32,22 @@
         }
 
         function sendData() {
-            if (typeof a !== 'undefined' && typeof x !== 'undefined') {
-                calculate(); // Выполняем расчет перед отправкой данных
-                var form = document.getElementById('UserEnter');
-                form.action = "https://www.bing.com/search?";
-                form.target = "_blank";
-                form.submit();
-            } else {
-                alert('Сначала выполните вычисления!');
-            }
+            var resultValue = document.getElementById('result').innerText;
+            var form = document.createElement('form');
+            form.action = "https://www.bing.com/search?";
+            form.method = "GET";
+            form.target = "_blank";
+
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'q';
+            input.value = resultValue;
+
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
         }
+
     </script>
 </form>
 </body>
