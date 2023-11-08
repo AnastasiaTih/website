@@ -1,3 +1,3 @@
 # website
-https://github.com/AnastasiaTih/website/blob/main/change.html
-https://github.com/AnastasiaTih/website/blob/main/dom.html
+https://anastasiatih.github.io/website/change.html
+https://anastasiatih.github.io/website/dom.html
